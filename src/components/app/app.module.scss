@@ -1,0 +1,52 @@
+@use '../table/table.module.scss' as table;
+
+$heightHeader: 90px;
+$heightFooter: 50px;
+$heightquantity: 25px;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $heightHeader;
+}
+
+.boxMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  min-height: calc(100vh - $heightHeader - $heightFooter - 40px);
+}
+
+.boxTableActions {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  max-width: 100%;
+  width: table.$widthTable;
+}
+
+.inputSeach {
+  width: max(100px, calc(table.$widthTable * .5));
+}
+
+.quantity {
+  display: flex;
+  align-self: flex-end;
+  padding: 10px 20px;;
+  text-align: right;
+  height: $heightquantity;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: $heightFooter;
+
+  .autor {
+    margin: 0 15px;
+    font-size: 12px;
+  }
+}

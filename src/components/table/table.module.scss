@@ -1,0 +1,42 @@
+$maxwidth: 95vw;
+
+$minName: 300px;
+$minhVocation: 85px;
+$minDate: 85px;
+$minProjects: 85px;
+$minActions: 85px;
+$minTable: calc($minName + $minhVocation + $minDate + $minProjects + $minActions);
+$widthName: max($minName, $maxwidth * $minName / $minTable);
+$widthVocation: max($minhVocation, $maxwidth * $minhVocation / $minTable);
+$widthDate: max($minDate , $maxwidth * $minDate / $minTable);
+$widthProjects: max($minProjects, $maxwidth * $minProjects / $minTable);
+$widthActions: max($minActions, $maxwidth * $minActions / $minTable);
+$widthTable: calc($widthName + $widthVocation + $widthDate + $widthProjects + $widthActions);
+
+.name {
+  width: $widthName;
+}
+
+.vocation {
+  width: $widthVocation;
+}
+
+.date {
+  width: $widthDate;
+}
+
+.projects {
+  width: $widthProjects;
+}
+
+.actions {
+  width: $widthActions;
+}
+
+.table {
+  width: $widthTable;
+}
+
+.rowHighlight {
+  background-color: rgb(244, 252, 127);
+}
